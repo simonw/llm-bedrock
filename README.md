@@ -37,7 +37,8 @@ Run `llm models` to see the list of models. The [Amazon Nova](https://aws.amazon
 
 - `us.amazon.nova-micro-v1:0` (alias: `nova-micro`) - cheapest and fastest, text only
 - `us.amazon.nova-lite-v1:0` (alias: `nova-lite`) - can handle text, images and PDFs
-- `us.amazon.nova-pro-v1:0` (alias: `nova-pro`) - can handle text, images and PDFs, best and most expensive
+- `us.amazon.nova-pro-v1:0` (alias: `nova-pro`) - can handle text, images and PDFs, second best
+- `us.amazon.nova-premier-v1:0` (alias: `nova-premier`) - can handle text, images and PDFs, best and most expensive
 
 Run a prompt like this:
 
