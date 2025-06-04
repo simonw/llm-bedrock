@@ -16,20 +16,25 @@ llm install llm-bedrock
 
 ### Credentials
 
-You'll need an access key and a secret key to use this plugin, with permission granted to access the Bedrock Nova models.
+You'll need AWS credentials with permission to access the Bedrock Nova models. There are three ways to provide credentials:
 
-If you have already configured the AWS CLI on your machine you may be able to skip this step, as the plugin will automatically use the credentials from the CLI.
+1. If you have already configured the AWS CLI on your machine, the plugin will automatically use the default credentials.
+
+2. You can use a specific AWS profile:
+   ```bash
+   llm keys set bedrock
+   # paste <aws profile name> here
+   ```
+
+3. You can provide explicit access key and secret key credentials:
+   ```bash
+   llm keys set bedrock
+   # paste access_key:secret_key here
+   ```
 
 You still need to request access to the Bedrock models [in the AWS console](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/), which should be provisioned automatically within seconds of you filing the request.
 
-If you want to use the plugin with dedicated IAM credentials (an access key and a secret key) follow these [step by step instructions](https://ndurner.github.io/amazon-nova) by Nils Durner.
-
-Combine those into a `access_key:secret_key` format (joined by a colon) and paste that into:
-
-```bash
-llm keys set bedrock
-# paste access_key:secret_key here
-```
+If you want to create dedicated IAM credentials (an access key and a secret key) follow these [step by step instructions](https://ndurner.github.io/amazon-nova) by Nils Durner.
 
 ## Usage
 
